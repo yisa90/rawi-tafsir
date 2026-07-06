@@ -20,7 +20,9 @@ Each JSON file: `{ "text": "...", "ayah": N, "surah": N }`
 | ar-tafseer-al-saddi | Al-Sa'di | Arabic | spa5k/tafsir_api |
 | ar-tafsir-ibn-kathir | Ibn Kathir | Arabic | spa5k/tafsir_api |
 | ar-tafseer-al-qurtubi | Al-Qurtubi | Arabic | spa5k/tafsir_api |
-| tr-tafsir-ibn-kathir | Ibn Kathir | Turkish | QUL (resource 306) |
+| tr-al-mukhtasar | Al-Mukhtasar | Turkish | UNKNOWN — see git history |
+| tr-elmalili-yazir | Elmalılı Hamdi Yazır | Turkish | UNKNOWN — see git history |
+| fr-al-mukhtasar | Al-Mukhtasar | French | UNKNOWN — see git history |
 
 ## License
 
