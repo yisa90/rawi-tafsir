@@ -19,10 +19,21 @@
     "'attribution_required' true with an empty 'attribution' is a build failure,",
     "and the reader refuses to open such a bundle at all.",
     "",
-    "The German row is pending: Rassoul was dropped, Mourad (Erläuterung des",
-    "Koran, DIdI) is being extracted into tafsir/de-mourad/. It is added here in",
-    "the same commit as its tree, with awaiting_scholarly_review true (ADR-013",
-    "gate) and whatever attribution its rights terms require."
+    "The German row is de-mourad (Erläuterung des Koran, DIdI e.V., 12 vols),",
+    "extracted from the publisher's own Word sources — see",
+    "tafsir/de-mourad/PROVENANCE.md. It is gated: awaiting_scholarly_review is",
+    "true (ADR-013) and the ADR-013 scholar-of-record slot is still empty.",
+    "",
+    "ITS ATTRIBUTION IS A PROVISIONAL PLACEHOLDER, NOT APPROVED WORDING. DIdI",
+    "administers the text as a waqf and reserves the right to approve reprints;",
+    "that is a named channel, not a blanket licence like Rassoul's. The founder",
+    "is handling the rights conversation. The exact string DIdI requires replaces",
+    "the placeholder BEFORE the gate flips — the placeholder is worded so it",
+    "cannot be mistaken for approved text.",
+    "",
+    "de-rassoul is ORPHANED: its tree is still on disk and has no row here, so",
+    "the generator does not bundle it and says so out loud. Deleting the tree is",
+    "a separate decision that has not been taken."
   ],
   "editions": [
     {
@@ -115,6 +126,19 @@
       "attribution": null,
       "attribution_required": false,
       "awaiting_scholarly_review": false
+    },
+    {
+      "id": 1004,
+      "slug": "de-mourad",
+      "name": "Erläuterung des Koran",
+      "author": "Samir Mourad",
+      "language": "de",
+      "attribution": "PLATZHALTER — Genehmigung von DIdI e.V. ausstehend. Aus: Erläuterung des Koran (Tafsīr) von Samir Mourad, Deutscher Informationsdienst über den Islam (DIdI) e.V. Der Text ist ein Waqf; die Verwaltung erfolgt durch DIdI e.V.",
+      "attribution_required": true,
+      "awaiting_scholarly_review": true,
+      "_attribution_note": "PROVISIONAL. Not approved by DIdI. Prefixed PLATZHALTER so it cannot ship unnoticed. Replace with DIdI's required wording before awaiting_scholarly_review flips.",
+      "_coverage_note": "6213/6236 ayahs (99.63%). The 23 gaps are silences in the printed book; 14 of them have commentary the book never keyed. See PROVENANCE.md.",
+      "_range_note": "keys commentary to ayah RANGES — only 329 of 1505 blocks are single-ayah, median 3, largest 26:10-68 (59 ayahs). Whether the range or the ayah is the display unit is an open eng-lead call (ADR-012 parity gate)."
     }
   ]
 }
