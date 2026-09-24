@@ -1,0 +1,120 @@
+{
+  "schema": 1,
+  "bundle_version": "2026-09-24.1",
+  "_comment": [
+    "THE edition catalogue. It used to be two hand-written lists — Swift's",
+    "TafsirCatalog.allIncludingUnreviewed and Kotlin's TafsirInfo.ALL_INCLUDING_UNREVIEWED —",
+    "that had to match with nothing enforcing it. This file replaces both: the",
+    "generator copies these rows into dist/manifest.json, which ships with the",
+    "data, and both apps parse it. Adding an edition is a row here plus a tree",
+    "under tafsir/<slug>/, never a Swift or Kotlin edit.",
+    "",
+    "A row here MUST have a tree on disk: the generator fails closed rather than",
+    "ship a catalogue entry with no data. A tree on disk with no row here is not",
+    "bundled, and the generator says so out loud.",
+    "",
+    "'language' is a code. The display string and the flag stay per-platform.",
+    "'id' is stable and load-bearing — it is what a user's saved preference",
+    "points at. FREE_ID = 169 lives in app code: that is monetization, not data.",
+    "'attribution_required' true with an empty 'attribution' is a build failure,",
+    "and the reader refuses to open such a bundle at all.",
+    "",
+    "The German row is pending: Rassoul was dropped, Mourad (Erläuterung des",
+    "Koran, DIdI) is being extracted into tafsir/de-mourad/. It is added here in",
+    "the same commit as its tree, with awaiting_scholarly_review true (ADR-013",
+    "gate) and whatever attribution its rights terms require."
+  ],
+  "editions": [
+    {
+      "id": 169,
+      "slug": "en-tafisr-ibn-kathir",
+      "name": "Ibn Kathir",
+      "author": "Hafiz Ibn Kathir",
+      "language": "en",
+      "attribution": null,
+      "attribution_required": false,
+      "awaiting_scholarly_review": false,
+      "_slug_note": "misspelling is load-bearing — the corrected spelling 403s on the CDN and the slug is pinned by a test on both platforms. Do not fix."
+    },
+    {
+      "id": 168,
+      "slug": "en-tafsir-maarif-ul-quran",
+      "name": "Ma'arif al-Qur'an",
+      "author": "Mufti Muhammad Shafi",
+      "language": "en",
+      "attribution": null,
+      "attribution_required": false,
+      "awaiting_scholarly_review": false
+    },
+    {
+      "id": 817,
+      "slug": "en-tazkirul-quran",
+      "name": "Tazkirul Quran",
+      "author": "Maulana Wahiduddin Khan",
+      "language": "en",
+      "attribution": null,
+      "attribution_required": false,
+      "awaiting_scholarly_review": false
+    },
+    {
+      "id": 91,
+      "slug": "ar-tafseer-al-saddi",
+      "name": "Al-Sa'di",
+      "author": "Abd al-Rahman Al-Sa'di",
+      "language": "ar",
+      "attribution": null,
+      "attribution_required": false,
+      "awaiting_scholarly_review": false
+    },
+    {
+      "id": 14,
+      "slug": "ar-tafsir-ibn-kathir",
+      "name": "Ibn Kathir",
+      "author": "Hafiz Ibn Kathir",
+      "language": "ar",
+      "attribution": null,
+      "attribution_required": false,
+      "awaiting_scholarly_review": false
+    },
+    {
+      "id": 1002,
+      "slug": "ar-tafseer-al-qurtubi",
+      "name": "Al-Qurtubi",
+      "author": "Imam Al-Qurtubi",
+      "language": "ar",
+      "attribution": null,
+      "attribution_required": false,
+      "awaiting_scholarly_review": false
+    },
+    {
+      "id": 173,
+      "slug": "fr-al-mukhtasar",
+      "name": "Al-Mukhtasar",
+      "author": "Markaz Tafsir",
+      "language": "fr",
+      "attribution": null,
+      "attribution_required": false,
+      "awaiting_scholarly_review": false
+    },
+    {
+      "id": 258,
+      "slug": "tr-al-mukhtasar",
+      "name": "Al-Mukhtasar",
+      "author": "Markaz Tafsir",
+      "language": "tr",
+      "attribution": null,
+      "attribution_required": false,
+      "awaiting_scholarly_review": false
+    },
+    {
+      "id": 1003,
+      "slug": "tr-elmalili-yazir",
+      "name": "Elmalılı Hamdi Yazır",
+      "author": "Elmalılı Muhammed Hamdi Yazır",
+      "language": "tr",
+      "attribution": null,
+      "attribution_required": false,
+      "awaiting_scholarly_review": false
+    }
+  ]
+}

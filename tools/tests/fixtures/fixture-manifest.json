@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "bundle_version": "fixture",
+  "source_commit": null,
+  "ayah_count": 6236,
+  "ayah_order_version": "4498d920be9450ff",
+  "chunk_target_bytes": 131072,
+  "compression": "deflate-raw-9",
+  "generator": "tools/tests/make_fixture.py",
+  "editions": [
+    {
+      "id": 999999,
+      "slug": "fixture-edition",
+      "name": "Fixture Edition",
+      "author": "rawi-tafsir tools",
+      "language": "xx",
+      "attribution": "Fixture attribution — a reader must not hand back text without this.",
+      "attribution_required": true,
+      "awaiting_scholarly_review": true,
+      "file": "fixture-edition.rtb",
+      "sha256": "8cf753c6f610c50bcbc12d4505c65fd076f5b693c6fad02081053da480001783",
+      "bytes": 68503,
+      "blocks": 6057,
+      "chunks": 7,
+      "ayahs_with_commentary": 6111,
+      "ayahs_without_commentary": 125,
+      "max_coverage_run": 20
+    }
+  ]
+}

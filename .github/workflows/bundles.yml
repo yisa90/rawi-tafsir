@@ -1,0 +1,30 @@
+name: bundles
+
+# The generator obligations in the format spec are only real if they run. This
+# builds every edition from the source tree on every push and round-trips all
+# 56,000-odd records back out of the .rtb.
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: format + fixture contract
+        run: python3 tools/tests/test_bundles.py
+      - name: full build, round-trip and determinism
+        env:
+          RTB_REAL_TREE: "1"
+        run: python3 tools/tests/test_bundles.py
+      - name: build the shipping artifacts
+        run: python3 tools/build-bundles.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tafsir-bundles
+          path: dist/

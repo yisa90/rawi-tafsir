@@ -1,1 +1,7 @@
 .DS_Store
+# Generated bundles. They ship as a GitHub release artifact (tag
+# tafsir-bundle-v1), never committed: 23 MB of binaries in git history, twice,
+# is what the release tag exists to avoid.
+dist/
+__pycache__/
+*.pyc
